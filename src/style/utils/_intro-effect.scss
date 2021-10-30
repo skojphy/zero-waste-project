@@ -1,4 +1,3 @@
-@use '../utils' as *;
 @use '../config' as *;
 
 $first: '0C2331';
@@ -13,24 +12,26 @@ $third: 'F0F7FB';
 }
 
 .first-access-effect {
-    &--1 {
-        bottom: -198px;
-        background-image: url("../../src/images/one-wave.svg");    
-        animation: upstream 8000ms ease-in-out forwards;
-        z-index: 2000;
-    }
-    &--2 {
-        bottom: -398px;
-        background-image: url("../../src/images/two-wave.svg");    
-        animation: upstream 8000ms ease-in-out forwards;
-        z-index: 3000;
-    }
-    &--3 {
-        bottom: -798px;
-        background-image: url("../../src/images/three-wave.svg");    
-        animation-delay: 400ms;
-        animation: upstream 8000ms ease-in-out forwards;
-        z-index: 4000;
+    @include desktop {
+        &--1 {
+            bottom: -198px;
+            background-image: url("../../src/images/one-wave.svg");    
+            animation: upstream 4000ms ease-in-out forwards;
+            z-index: 2000;
+        }
+        &--2 {
+            bottom: -398px;
+            background-image: url("../../src/images/two-wave.svg");    
+            animation: upstream 4000ms ease-in-out forwards;
+            z-index: 3000;
+        }
+        &--3 {
+            bottom: -798px;
+            background-image: url("../../src/images/three-wave.svg");    
+            animation-delay: 400ms;
+            animation: upstream 4000ms ease-in-out forwards;
+            z-index: 4000;
+        }
     }
 }
 

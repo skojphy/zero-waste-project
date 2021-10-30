@@ -2,7 +2,6 @@
 @use '../config'as *;
 
 .cases {
-
     z-index: 20;
     background-color: #FFF;
     position: relative;
@@ -10,6 +9,16 @@
     text-align: center;
     color: $text-color2;
     padding: rem(100px);
+    @include mobile{
+        &__button{
+            width: 100%;
+        }
+    }
+    @include desktop{
+        &__button{
+            width: 50%;
+        }
+    }
 
     &__heading {
         display: block;
@@ -122,6 +131,5 @@
         display: block;
         margin: rem(50px) auto;
         padding: rem(20px);
-        width: 50%;
     }
 }

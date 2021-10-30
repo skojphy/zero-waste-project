@@ -17,7 +17,6 @@ radios.forEach(function (elem) {
     document.getElementById(`mbti-${nextNum}`).classList.add("is-flex-active");
 
       result += parseInt(elem.getAttribute("value"));
-      console.log(`문제,value : ${curNum} , ${result}`);
     });
 });
 
@@ -28,9 +27,9 @@ getResult.addEventListener("click", function(){
   let resultFinal;
   if(result<6){
     resultFinal = 1;
-  }else if(result< 11){
+  }else if(result< 16){
     resultFinal = 2;
-  }else if(result < 15){
+  }else if(result < 21){
     resultFinal = 3;
   }else{
     resultFinal = 4;

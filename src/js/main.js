@@ -17,7 +17,8 @@ button.addEventListener(
   "click",
   (e) => {
     e.preventDefault;
-    headerNav.classList.add("is-active");
+    // console.log();
+
     for (let i = 1; i <= waveEffect.length; i++) {
       waveEffect[i - 1].classList.remove(`first-access-effect--${i}`);
     }
@@ -26,9 +27,15 @@ button.addEventListener(
         waveEffect[i - 1].classList.add(`first-access-effect--${i}`);
       }
     }, 200);
-    setTimeout(() => {
+    if (window.innerWidth > 767) {
+      setTimeout(() => {
+        headerNav.classList.add("is-active");
+        headerNav.classList.add("block");
+      }, 800);
+    } else {
+      headerNav.classList.add("is-active");
       headerNav.classList.add("block");
-    }, 800);
+    }
     setTimeout(() => {
       footer.classList.add("is-active");
     }, 2000);
@@ -57,15 +64,10 @@ document.addEventListener("scroll", (e) => {
   let direction = currentY - window.__scrollPosition >= 0 ? 1 : -1;
   // console.log(direction);
   if (direction === 1) {
-    headerWrapper.classList.remove("header-hide");
-    headerWrapper.classList.add("header-appear");
-    header.classList.remove("nav-slideUp");
-  } else {
     headerWrapper.classList.remove("header-appear");
     headerWrapper.classList.add("header-hide");
     header.classList.add("nav-slideUp");
-  }
-  if (currentY === 0) {
+  } else {
     headerWrapper.classList.remove("header-hide");
     headerWrapper.classList.add("header-appear");
     header.classList.remove("nav-slideUp");

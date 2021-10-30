@@ -95,7 +95,6 @@ body {
         background: $bg-color;
         padding: rem(20px);
         display: none;
-        // display: block;
 
         .is-active {
             display: block;
@@ -108,18 +107,22 @@ body {
         }
 
         width: 100%;
-        font-size: rem(48px);
         align-self: center;
         @include mobile {
             font-size: rem(32px);
         }
+        @include desktop {
+            font-size: rem(48px);
+        }
 
         &-heading {
-            font-size: rem(32px);
-            line-height: rem(48px);
             @include mobile {
                 font-size: rem(24px);
                 line-height: rem(32px);
+            }
+            @include desktop {
+                font-size: rem(32px);
+                line-height: rem(48px);
             }
         }
 
@@ -129,17 +132,21 @@ body {
         }
         &-list {
             position: absolute;
-            left: 50%;
             top: 25%;
             @include mobile {
                 left: 0;
             }
+            @include desktop {
+                left: 50%;
+            }
         }
         &-item {
             &.news-views, &.your-mbti, &.support-us {
-                margin-top: rem(32px);
                 @include mobile {
                     margin-top: rem(48px);
+                }
+                @include desktop {
+                    margin-top: rem(32px);
                 }
             }
         }

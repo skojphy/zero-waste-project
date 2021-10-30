@@ -22,9 +22,7 @@
 
     &__heading {
         text-align: center;
-        font-size: rem(48px);
         font-weight: 700;
-        margin-top: rem(96px);
         
         @include mobile {
             font-size: rem(32px);
@@ -32,14 +30,20 @@
             line-height: rem(48px);
             margin-top: rem(72px);
         }
+        @include desktop {
+            font-size: rem(48px);
+            margin-top: rem(96px);
+        }
     }
 
     &__form {
-        margin-top: rem(64px);
         padding: 0 rem(20px);
 
         @include mobile {
             margin-top: rem(32px);
+        }
+        @include desktop {
+            margin-top: rem(64px);
         }
         fieldset {
             display: flex;

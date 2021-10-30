@@ -1,124 +1,148 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="나의 제로웨이스트 점수를 테스트합니다.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="나의 제로웨이스트 점수를 테스트합니다." />
     <title>Zero-Waste</title>
-</head>
+    <link rel="stylesheet" href="./css/style/index.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-
-        <!-- 헤더 Wrapper -->
-        <div class="header__wrapper">
-            <h1 class="logo"><a href="/">Zero-Waste</a></h1>
-            <div class="header__menu">
-                <a href="#" class="header__menu-staff">Staff</a>
-                <button class="header__menu-button">
-                    Menu
-                    <span class="button--burger">
-                        <span class="button--burger__bar"></span>
-                        <span class="button--burger__bar"></span>
-                    </span>
-                </button>
-            </div>
+      <!-- 헤더 Wrapper -->
+      <div class="header__wrapper">
+        <h1 class="logo"><a href="/">Zero-Waste</a></h1>
+        <div class="header__menu">
+          <a href="#" class="header__menu-staff">Staff</a>
+          <button class="header__menu-button">
+            Menu
+            <span class="button--burger">
+              <span class="button--burger__bar"></span>
+              <span class="button--burger__bar"></span>
+            </span>
+          </button>
         </div>
+      </div>
 
-        <!-- 네비게이션 -->
-        <nav class="header__nav">
-            <div class="header__nav-inner">
-                <h2 class="header__nav-heading">Let's Together!</h2>
-                <ul class="header__nav-list">
-                    <li class="header__nav-item home"><a class="header__nav-link" href="/">Home</a></li>
-                    <li class="header__nav-item news-views"><a class="header__nav-link" href="#">News & Views</a></li>
-                    <li class="header__nav-item your-mbti"><a class="header__nav-link" href="/mbti.html">Zero MBTI</a>
-                    </li>
-                    <li class="header__nav-item support-us"><a class="header__nav-link" href="/supportUs.html">Support
-                            Us</a></li>
-                </ul>
-                <!-- 수정 -->
-                <button class="nav__close"><span>×</span></button>
-            </div>
-        </nav>
-
-
+      <!-- 네비게이션 -->
+      <nav class="header__nav">
+        <div class="header__nav-inner">
+          <h2 class="header__nav-heading">Let's Together!</h2>
+          <ul class="header__nav-list">
+            <li class="header__nav-item home"><a class="header__nav-link" href="/">Home</a></li>
+            <li class="header__nav-item news-views">
+              <a class="header__nav-link" href="#">News & Views</a>
+            </li>
+            <li class="header__nav-item your-mbti">
+              <a class="header__nav-link" href="/mbti.html">Zero MBTI</a>
+            </li>
+            <li class="header__nav-item support-us">
+              <a class="header__nav-link" href="/supportUs.html">Support Us</a>
+            </li>
+          </ul>
+          <!-- 수정 -->
+          <button class="nav__close"><span>×</span></button>
+        </div>
+      </nav>
     </header>
 
     <main>
+      <!-- 치고올라오는 물결 -->
+      <div class="first-access first-access-effect--1"></div>
+      <div class="first-access first-access-effect--2"></div>
+      <div class="first-access first-access-effect--3"></div>
 
-        <!-- 치고올라오는 물결 -->
-        <div class="first-access first-access-effect--1"></div>
-        <div class="first-access first-access-effect--2"></div>
-        <div class="first-access first-access-effect--3"></div>
+      <!-- mbti 질문지 -->
+      <section class="mbti">
+        <h2 class="a11yHidden">제로 웨이스트 점수 질문지</h2>
+        <form class="mbti__survey" method="post">
+          <fieldset class="mbti__field field is-flex-active" id="mbti-1">
+            <legend class="a11yHidden">1번 문제</legend>
+            <p class="field__q">음료를 마실 때 당신은 ?</p>
+            <label for="q1R1" class="field__label">플라스틱 일회용 빨대를 사용해요.</label>
+            <input type="radio" name="1" id="q1R1" value="0" class="field__radio" required />
+            <label for="q1R2" class="field__label"
+              >유리, 스테인리스 재질의 다회용 빨대를 사용해요.</label
+            >
+            <input type="radio" name="1" id="q1R2" value="3" class="field__radio" required />
+          </fieldset>
+          <fieldset class="mbti__field field" id="mbti-2">
+            <legend class="a11yHidden">2번 문제</legend>
+            <div class="field__q">설거지를 할 때 당신은?</div>
+            <label for="q2R1" class="field__label">플라스틱 섬유로 만든 수세미를 사용해요.</label>
+            <input type="radio" name="2" id="q2R1" value="0" class="field__radio" required />
+            <label for="q2R2" class="field__label">식물성 천연 수세미를 사용해요.</label>
+            <input type="radio" name="2" id="q2R2" value="5" class="field__radio" required />
+          </fieldset>
+          <fieldset class="mbti__field field" id="mbti-3">
+            <legend class="a11yHidden">3번 문제</legend>
+            <div class="field__q">비가 오는 날 우산을 들고 실내에 들어갈 때</div>
+            <label for="q3R1" class="field__label">우산 비닐에 넣어 우산을 보관해요.</label>
+            <input type="radio" name="3" id="q3R1" value="0" class="field__radio" required />
+            <label for="q3R2" class="field__label"
+              >챙겨 두었던 우산 커버를 꺼내 우산을 보관해요.</label
+            >
+            <input type="radio" name="3" id="q3R2" value="5" class="field__radio" required />
+          </fieldset>
+          <fieldset class="mbti__field field" id="mbti-4">
+            <legend class="a11yHidden">4번 문제</legend>
+            <div class="field__q">배달 음식을 주문할 때</div>
+            <label for="q4R1" class="field__label">일회용품을 사용하고 식사 후 버려요.</label>
+            <input type="radio" name="4" id="q4R1" value="0" class="field__radio" required />
+            <label for="q4R2" class="field__label"
+              >일회용품은 거절하고 다회용 식기 도구를 사용해요.</label
+            >
+            <input type="radio" name="4" id="q4R2" value="5" class="field__radio" required />
+          </fieldset>
+          <fieldset class="mbti__field field" id="mbti-5">
+            <legend class="a11yHidden">5번 문제</legend>
+            <div class="field__q">카페에서 음료를 포장할 때,</div>
+            <label for="q5R1" class="field__label"
+              >조금 불편하지만 텀블러와 머그컵을 사용해요.</label
+            >
+            <input type="radio" name="5" id="q5R1" value="5" class="field__radio" required />
+            <label for="q5R2" class="field__label"
+              >무조건 편한 게 최고! 일회용 컵을 사용해요.</label
+            >
+            <input type="radio" name="5" id="q5R2" value="0" class="field__radio" required />
+          </fieldset>
+          <fieldset class="mbti__field field" id="mbti-6">
+            <legend class="a11yHidden">6번 문제</legend>
+            <div class="field__q">나는 오늘부터</div>
+            <label for="q6R1" class="field__label"
+              >가족과 지인에게 제로 웨이스트를 소개할 거예요.</label
+            >
+            <input type="radio" name="6" id="q6R1" value="6" class="field__radio" required />
+            <label for="q6R2" class="field__label">제로 웨이스트 따위 별로 관심 없어요.</label>
+            <input type="radio" name="6" id="q6R2" value="0" class="field__radio" required />
+          </fieldset>
 
-        <!-- mbti 질문지 -->
-        <section class="mbti">
-            <h2 class="a11yHidden">제로 웨이스트 점수 질문지</h2>
-            <form class="mbti__survey" method="post">
-                <fieldset class="mbti__field field is-flex-active" id="mbti-1">
-                    <legend class="a11yHidden">1번 문제</legend>
-                    <p class="field__q">음료를 마실 때</p>
-                    <label for="q1R1" class="field__label">플라스틱 일회용 빨대를 사용해요.</label>
-                    <input type="radio" name="1" id="q1R1" value="0" class="field__radio" required />
-                    <label for="q1R2" class="field__label">유리, 스테인리스 재질의 다회용 빨대를 사용해요.</label>
-                    <input type="radio" name="1" id="q1R2" value="3" class="field__radio" required />
-                </fieldset>
-                <fieldset class="mbti__field field" id="mbti-2">
-                    <legend class="a11yHidden">2번 문제</legend>
-                    <div class="field__q">설거지를 할 때</div>
-                    <label for="q2R1" class="field__label">플라스틱 섬유로 만든 수세미를 사용해요.</label>
-                    <input type="radio" name="2" id="q2R1" value="0" class="field__radio" required />
-                    <label for="q2R2" class="field__label">식물성 천연 수세미를 사용해요.</label>
-                    <input type="radio" name="2" id="q2R2" value="5" class="field__radio" required />
-                </fieldset>
-                <fieldset class="mbti__field field" id="mbti-3">
-                    <legend class="a11yHidden">3번 문제</legend>
-                    <div class="field__q">333334545</div>
-                    <label for="q3R1" class="field__label">플라스틱 섬유로 만든 수세미를 사용해요.</label>
-                    <input type="radio" name="3" id="q3R1" value="0" class="field__radio" required />
-                    <label for="q3R2" class="field__label">식물성 천연 수세미를 사용해요.</label>
-                    <input type="radio" name="3" id="q3R2" value="5" class="field__radio" required />
-                </fieldset>
-                <fieldset class="mbti__field field" id="mbti-4">
-                    <legend class="a11yHidden">4번 문제</legend>
-                    <div class="field__q">333334545</div>
-                    <label for="q4R1" class="field__label">플라스틱 섬유로 만든 수세미를 사용해요.</label>
-                    <input type="radio" name="4" id="q4R1" value="0" class="field__radio" required />
-                    <label for="q4R2" class="field__label">식물성 천연 수세미를 사용해요.</label>
-                    <input type="radio" name="4" id="q4R2" value="5" class="field__radio" required />
-                </fieldset>
-                <fieldset class="mbti__field field" id="mbti-5">
-                    <legend class="a11yHidden">5번 문제</legend>
-                    <div class="field__q">333334545</div>
-                    <label for="q5R1" class="field__label">플라스틱 섬유로 만든 수세미를 사용해요.</label>
-                    <input type="radio" name="5" id="q5R1" value="0" class="field__radio" required />
-                    <label for="q5R2" class="field__label">식물성 천연 수세미를 사용해요.</label>
-                    <input type="radio" name="5" id="q5R2" value="5" class="field__radio" required />
-                </fieldset>
-
-                <div class="mbti__field field" id="mbti-6">
-                    <a class="button" id="getResult" href="">결과 보기</a>
-                </div>
-            </form>
-        </section>
-        <div class="mbti-bg">
-            <div class="visual__ocean mbti-bg__wave">
-                <img class="mbti-bg__bear" src="./images/mbti-swimm-bear.png" alt="">
-                <div class="visual__wave"></div>
-                <div class="visual__wave wave-effect2"></div>
-                <div class="visual__wave wave-effect3"></div>
-                <div class="visual__wave wave-effect4"></div>
-            </div>
+          <div class="mbti__field field" id="mbti-7">
+            <a class="button field__result" id="getResult" href="">결과 보기</a>
+          </div>
+        </form>
+      </section>
+      <div class="mbti-bg">
+        <img
+          class="mbti-bg__bear"
+          src="./images/mbti-swimm-bear.png"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+        <div class="visual__ocean mbti-bg__wave">
+          <div class="visual__wave mbti-wave"></div>
+          <!-- <div class="visual__wave wave-effect2 mbti-wave"></div> -->
+          <div class="visual__wave wave-effect3 mbti-wave"></div>
+          <!-- <div class="visual__wave wave-effect4 mbti-wave"></div> -->
+          <div class="mbti-block"></div>
         </div>
+      </div>
     </main>
-    <footer class="footer">
-
-    </footer>
+    <footer class="footer"></footer>
     <script src="./js/main.js"></script>
     <script src="./js/getResult.js"></script>
-</body>
-
+  </body>
 </html>

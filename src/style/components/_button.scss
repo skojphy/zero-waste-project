@@ -1,19 +1,27 @@
 @use '../config' as *;
-@use '../utils/' as *;
+@use '../utils' as *;
 // Defult form components=========FROM YIM
-.button {
+
+@mixin button($padding-tb: rem(20px), $padding-lr: rem(20px)){
     appearance: none;
-    // pointer-events: none;
     border: 0;
     background : $primary;
     color: $white;
-    padding: rem(8px) rem(16px);
-    font-size: rem(32px);
+    padding: $padding-tb $padding-lr;
     border-radius: rem(5px);
+    text-align: center;
+    @content;
+}
+.button {
+    @include button;
 }
 
-.buttonNone{
+@mixin buttonNone{
     appearance: none;
     border: 0;
     background-color: transparent;
+    @content;
+}
+.buttonNone{
+    @include buttonNone();
 }

@@ -1,10 +1,13 @@
 @use './base';
+<<<<<<< HEAD
 @use './_yim';
 @use './_park';
 @use './_son';
+=======
+@use './layout';
+>>>>>>> e47ea13e02a92fdc4d3ea425622cf17fabdc6b3c
 
 @use './components';
 @use './config';
-@use './layout';
 @use './pages';
 @use './utils';

@@ -1,114 +1,123 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zero-Waste</title>
-    <!-- <link rel="stylesheet" href="./css/style/index.css"> -->
-</head>
+    <link rel="stylesheet" href="./css/style/index.css" />
+  </head>
 
-<body>
+  <body>
     <!-- ================= -->
     <!--          son      -->
     <!-- ================= -->
     <header class="header">
-
-        <!-- 헤더 Wrapper -->
-        <div class="header__wrapper">
-            <h1 class="logo"><a href="/">Zero-Waste</a></h1>
-            <div class="header__menu">
-                <a href="#" class="header__menu-staff">Staff</a>
-                <button class="header__menu-button">
-                    Menu
-                    <span class="button--burger">
-                        <span class="button--burger__bar"></span>
-                        <span class="button--burger__bar"></span>
-                    </span>
-                </button>
-            </div>
+      <!-- 헤더 Wrapper -->
+      <div class="header__wrapper">
+        <h1 class="logo"><a href="/">Zero-Waste</a></h1>
+        <div class="header__menu">
+          <a href="#" class="header__menu-staff">Staff</a>
+          <button class="header__menu-button">
+            Menu
+            <span class="button--burger">
+              <span class="button--burger__bar"></span>
+              <span class="button--burger__bar"></span>
+            </span>
+          </button>
         </div>
+      </div>
 
-        <!-- 네비게이션 -->
-        <nav class="header__nav">
-            <div class="header__nav-inner">
-                <h2 class="header__nav-heading">Let's Together!</h2>
-                <ul class="header__nav-list">
-                    <li class="header__nav-item home"><a class="header__nav-link" href="/">Home</a></li>
-                    <li class="header__nav-item news-views"><a class="header__nav-link" href="#">News & Views</a></li>
-                    <li class="header__nav-item your-mbti"><a class="header__nav-link" href="/mbti.html">Zero MBTI</a>
-                    </li>
-                    <li class="header__nav-item support-us"><a class="header__nav-link" href="/supportUs.html">Support
-                            Us</a></li>
-                </ul>
-                <!-- 수정 -->
-                <button class="nav__close"><span>×</span></button>
-            </div>
-        </nav>
-
-
+      <!-- 네비게이션 -->
+      <nav class="header__nav">
+        <div class="header__nav-inner">
+          <h2 class="header__nav-heading">Let's Together!</h2>
+          <ul class="header__nav-list">
+            <li class="header__nav-item home"><a class="header__nav-link" href="/">Home</a></li>
+            <li class="header__nav-item news-views">
+              <a class="header__nav-link" href="#">News & Views</a>
+            </li>
+            <li class="header__nav-item your-mbti">
+              <a class="header__nav-link" href="/mbti.html">Zero MBTI</a>
+            </li>
+            <li class="header__nav-item support-us">
+              <a class="header__nav-link" href="/supportUs.html">Support Us</a>
+            </li>
+          </ul>
+          <!-- 수정 -->
+          <button class="nav__close"><span>×</span></button>
+        </div>
+      </nav>
     </header>
     <main class="main">
-        <p class="test"></p>
-        <!-- 치고올라오는 물결 -->
-        <div class="first-access first-access-effect--1"></div>
-        <div class="first-access first-access-effect--2"></div>
-        <div class="first-access first-access-effect--3"></div>
+      <p class="test"></p>
+      <!-- 치고올라오는 물결 -->
+      <div class="first-access first-access-effect--1"></div>
+      <div class="first-access first-access-effect--2"></div>
+      <div class="first-access first-access-effect--3"></div>
 
-        <!-- 동영상 -->
-        <div class="support-us__container"></div>
-        <div class="support-us__wrapper">
-            <video class="support-us__video" autoplay loop muted>
-                <source src="./videos/Bottle.mp4" type="video/mp4">
-                당신의 브라우저는 동영상을 지원하지 않습니다
-            </video>
-        </div>
+      <!-- 동영상 -->
+      <div class="support-us__container"></div>
+      <div class="support-us__wrapper">
+        <video class="support-us__video" autoplay loop muted>
+          <source src="./videos/Bottle.mp4" type="video/mp4" />
+          당신의 브라우저는 동영상을 지원하지 않습니다
+        </video>
+      </div>
 
-        <h2 class="support-us__heading">우리의 노력을 응원해주세요!</h2>
+      <h2 class="support-us__heading">우리의 노력을 응원해주세요!</h2>
 
-        <form action='/' method="POST" class="support-us__form">
-            <fieldset>
-                <legend class="a11yHidden">Support Us Form</legend>
-                <input class="support-us__input-name" maxlength="5" type="text" name="name" placeholder="이름" required>
-                <input class="support-us__input-message" type="text" name="message" placeholder="저희를 응원해주세요!" required>
+      <form action="/" method="POST" class="support-us__form">
+        <fieldset>
+          <legend class="a11yHidden">Support Us Form</legend>
+          <input
+            class="support-us__input-name"
+            maxlength="5"
+            type="text"
+            name="name"
+            placeholder="이름"
+            required
+          />
+          <input
+            class="support-us__input-message"
+            type="text"
+            name="message"
+            placeholder="저희를 응원해주세요!"
+            required
+          />
 
-                <button class="support-us__form-button" type="submit">응원하기</button>
-            </fieldset>
-        </form>
-        <section class="support-us__bricks">
-
-            <h2 class="support-us__list-heading" id="supportUsListHeading">응원 담벼락</h2>
-            <ul class="support-us__list" aria-labelledby="supportUsListHeading">
-            </ul>
-        </section>
+          <button class="support-us__form-button" type="submit">응원하기</button>
+        </fieldset>
+      </form>
+      <section class="support-us__bricks">
+        <h2 class="support-us__list-heading" id="supportUsListHeading">응원 담벼락</h2>
+        <ul class="support-us__list" aria-labelledby="supportUsListHeading"></ul>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="footer__inner">
-            <div class="footer__connect">
-                <h2 class="footer__connect-heading">Connect With Us</h2>
-                <address class="footer__connect-item">Ajangs@gmail.com</address>
-            </div>
-            <div class="footer__support">
-                <h2 class="footer__support-heading">Support Us</h2>
-                <p class="footer__support-item">Find out more about how you can support our work here</p>
-            </div>
-            <div class="footer__follow">
-                <h2 class="footer__follow-heading">Follow Us</h2>
-                <ul class="footer__follow-list">
-                    <li class="footer__follow-item"><a href="#">Facebook</a></li>
-                    <li class="footer__follow-item"><a href="#">Instagram</a></li>
-                    <li class="footer__follow-item"><a href="#">Twitter</a></li>
-                    <li class="footer__follow-item"><a href="#">LinkedIn</a></li>
-                </ul>
-            </div>
+      <div class="footer__inner">
+        <div class="footer__connect">
+          <h2 class="footer__connect-heading">Connect With Us</h2>
+          <address class="footer__connect-item">Ajangs@gmail.com</address>
         </div>
+        <div class="footer__support">
+          <h2 class="footer__support-heading">Support Us</h2>
+          <p class="footer__support-item">Find out more about how you can support our work here</p>
+        </div>
+        <div class="footer__follow">
+          <h2 class="footer__follow-heading">Follow Us</h2>
+          <ul class="footer__follow-list">
+            <li class="footer__follow-item"><a href="#">Facebook</a></li>
+            <li class="footer__follow-item"><a href="#">Instagram</a></li>
+            <li class="footer__follow-item"><a href="#">Twitter</a></li>
+            <li class="footer__follow-item"><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
 
     <script src="./js/main.js" defer></script>
     <script src="./js/support.js" defer></script>
-
-</body>
-
+  </body>
 </html>

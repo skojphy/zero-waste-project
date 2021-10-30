@@ -1,4 +1,13 @@
 //이곳에 footer, header 등 다른 곳에서 사용할 수 있는 레이아웃을 넣어주세요
 
+<<<<<<< HEAD
 @forward './cases.scss';
 @forward './topic.scss';
+=======
+@forward './cases';
+@forward './topic';
+@forward './intro';
+@forward './header';
+@forward './visual';
+@forward './footer';
+>>>>>>> e47ea13e02a92fdc4d3ea425622cf17fabdc6b3c

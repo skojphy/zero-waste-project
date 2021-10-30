@@ -1,10 +1,11 @@
 require("dotenv").config();
+const os = require("os");
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 const isDevelopment = process.env.NODE_ENV === "development";
 const paths = {
@@ -42,10 +43,15 @@ module.exports = {
     splitChunks: {
       chunks: "all",
     },
+    minimize: isDevelopment ? false : true,
+    minimizer: [
+      new CssMinimizerPlugin({
+        parallel: os.cpus().length - 1,
+      }),
+    ],
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.s(a|c)ss$/i,
         exclude: /node_modules/,
         use: [
@@ -88,7 +94,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.js$/i,
+        test: /js\.js$/i,
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
@@ -105,19 +111,6 @@ module.exports = {
           from: "src",
         },
       ],
-    }),
-    new ImageMinimizerPlugin({
-      // 제외설정
-      exclude: /node_modules/,
-      // 최적화옵션
-      minimizerOptions: {
-        plugins: [
-          ["gifsicle", { interlaced: true }],
-          ["jpegtran", { progressive: true }],
-          ["optipng", { optimizationLevel: 5 }],
-          ["svgo", { plugins: [{ removeViewBox: false }] }],
-        ],
-      },
     }),
   ].concat(
     pages.map(

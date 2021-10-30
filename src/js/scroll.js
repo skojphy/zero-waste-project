@@ -1,10 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
+// INTRO__STATE 애니메이션
 gsap.to('.state__heading', {
   scrollTrigger: {
     trigger: ".state__heading",
     start: "-5% center",
-    end: "80% 20%",
+    end: "80% 15%",
     toggleClass: {
       targets: ".state__heading",
       className: "show"
@@ -56,15 +58,7 @@ gsap.to(".state__desc-wrapper", {
   },
 });
 
-gsap.to(".intro__zero-waste", {
-  scrollTrigger: {
-    trigger: ".intro__zero-waste",
-    toggleClass: 'show',
-    start: "top center",
-    end: "bottom -100%",
-  },
-});
-
+// INTRO__ARTICLE 애니메이션
 function animateFrom(elem, direction) {
   direction = direction || 1;
   var x = 0,
@@ -92,15 +86,7 @@ function animateFrom(elem, direction) {
   });
 }
 
-function hide(elem) {
-  gsap.set(elem, {
-    autoAlpha: 0
-  });
-}
-
 gsap.utils.toArray(".gs_reveal").forEach(function (elem) {
-  hide(elem); // assure that the element is hidden when scrolled into view
-
   ScrollTrigger.create({
     trigger: elem,
     onEnter: function () {
@@ -109,8 +95,16 @@ gsap.utils.toArray(".gs_reveal").forEach(function (elem) {
     onEnterBack: function () {
       animateFrom(elem, -1)
     },
-    onLeave: function () {
-      hide(elem)
-    } // assure that the element is hidden when scrolled into view
   });
+});
+
+
+// INTRO__ZERO-WASTE 애니메이션
+gsap.to(".intro__zero-waste", {
+  scrollTrigger: {
+    trigger: ".intro__zero-waste",
+    toggleClass: 'show',
+    start: "top center",
+    end: "bottom center",
+  },
 });

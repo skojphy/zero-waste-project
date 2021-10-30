@@ -1,0 +1,122 @@
+@use '../utils' as *;
+@use '../config' as *;
+
+.footer {
+  width: 100%;
+  margin: 0 auto rem(80px) auto;
+  padding: rem(20px);
+  color: $text-color;
+  overflow: hidden;
+
+  [class*='-heading'] {
+    font-weight: 500;
+  }
+  [class*='-item'] {
+    font-size: rem(14px);
+  }
+
+  &__inner {
+    position: relative;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: wrap;
+    margin: 0 auto;
+  }
+
+  @include mobile {
+    &__connect,
+    &__support,
+    &__follow {
+      width: 100%;
+    }
+    margin-bottom: rem(20px);
+    [class*='-heading'] {
+      font-size: rem(20px);
+      margin-top: rem(30px);
+      margin-bottom: rem(20px);
+    }
+    [class*='-item'] {
+      font-size: rem(16px);
+      margin-bottom: rem(16px);
+    }
+  }
+
+  @include desktop {
+    font-size: rem(20px);
+
+    [class*='-item'] {
+      font-size: rem(16px);
+      font-weight: 300;
+    }
+    &__connect,
+    &__support {
+      width: 50%;
+    }
+    &__connect-heading,
+    &__support-heading {
+      margin-bottom: rem(16px);
+    }
+    &__follow {
+      margin-top: rem(60px);
+      display: flex;
+      &-heading {
+        margin-right: rem(16px);
+      }
+      &-item {
+        display: inline-block;
+        margin-left: rem(16px);
+      }
+    }
+
+    &.is-active {
+      position: fixed;
+      max-width: 50%;
+      margin-right: 50%;
+      padding-right: 0;
+      z-index: 2000;
+      bottom: 0;
+      display: block;
+      font-size: rem(16px) !important;
+
+      .footer__inner {
+        display: block;
+        max-width: 600px;
+        margin: 0 0 0 auto;
+      }
+
+      [class*='-heading'],
+      [class*='-item'] {
+        animation: footerSlideUp 600ms ease-out forwards;
+      }
+
+      @at-root .footer.is-active [class*='-item'] {
+        font-size: rem(14px);
+        font-weight: 400;
+        margin-top: rem(16px);
+      }
+      .footer__support {
+        margin-top: rem(40px);
+      }
+
+      .footer__follow {
+        display: inline-block;
+        margin-top: rem(40px);
+        &-item {
+          display: block;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes footerSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
